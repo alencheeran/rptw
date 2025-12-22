@@ -1324,7 +1324,7 @@ css
 }
 .trust-logo {
     font-weight: 700;
-    /* color: #fff; */
+    color: #000;
     font-size: 1rem;
     opacity: 0.7;
 }
