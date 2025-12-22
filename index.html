@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Tuition | The Educational RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="#" class="logo-link">
+        <img src="assets/logo.png" alt="Logo" class="logo-img">
+    </a>       
+    
+    <div class="hamburger" id="hamburger-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="nav-links" id="nav-menu">
+        <a href="#pedagogy">The Science</a>
+        <a href="#schools">Institutions</a>
+        <a href="#contact" class="nav-btn-link">
+            <button class="btn-primary-small" style="margin-bottom: auto;">Partner With Us</button>
+        </a>
+    </div>
+</nav>
+
+<section class="hero">
+        <div class="parallax-layer">
+            <div class="floating-icon icon-1">🪙</div>
+            <div class="floating-icon icon-2">🧪</div>
+            <div class="floating-icon icon-3">π</div>
+            <div class="floating-icon icon-4">🛡️</div>
+            <div class="floating-icon icon-5">🎵</div> <div class="floating-icon icon-6">✏️</div> <div class="floating-icon icon-7">🌍</div> <div class="floating-icon icon-8">🚀</div> </div>
+
+        <div class="hero-content">
+            <span class="badge">🚀 v5.0 Partnership Ready</span>
+            <h1>Play Like a Champion. <br>Learn Like a <span class="gradient-text">Scholar.</span></h1>
+            <p>The curriculum-aligned RPG where solving math defeats dragons. Trusted by leading schools to drive engagement.</p>
+            
+            <div class="cta-group">
+                <button class="btn-mega">
+                    <a href="https://play.google.com/store/apps/details?id=com.RextechStudios.RockPaperTuition" target="_blank" style="text-decoration: none; color: white;">
+                    <span class="btn-icon">🎮</span> Get the App
+                    </a>
+                </button>
+                <button class="btn-secondary" onclick="location.href='#schools'" style="margin-left: 0;">
+                    For Schools & Partners
+                </button>
+            </div>
+
+            <div class="hero-trust-strip">
+                <span>Trusted by:</span>
+                <span class="trust-logo">Ryan Int.</span>
+                <span class="trust-logo">DPS</span>
+                <span class="trust-logo">Kendriya V.</span>
+                <span class="trust-logo">Byju's (Pilot)</span>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="planet planet-1"></div>
+            <div class="planet planet-2"></div>
+            
+            <div class="floating-card gameplay-card">
+                <div class="game-scene">
+                    <div class="battle-top">
+                        <div class="health-bar"><div class="hp-fill" style="width: 80%"></div></div>
+                        <div class="vs">VS</div>
+                        <div class="health-bar enemy"><div class="hp-fill" style="width: 40%"></div></div>
+                    </div>
+                    <div class="battle-mid">
+                        <div class="char player">🧙‍♂️<span class="shadow"></span></div>
+                        <div class="char dragon">🐉<span class="shadow"></span></div>
+                    </div>
+                    <div class="battle-ui">
+                        <div class="question">12 + 24 = ?</div>
+                        <div class="options">
+                            <span class="opt">30</span>
+                            <span class="opt correct">36</span>
+                            <span class="opt">42</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="journey" class="journey-section">
+        <div class="section-header">
+            <h2>Choose Your Realm</h2>
+            <p>Click (or hover) to reveal the syllabus path.</p>
+        </div>
+
+        <div class="path-container">
+            <svg class="path-svg" viewBox="0 0 400 1000" preserveAspectRatio="none">
+                <path d="M 200 0 
+                         C 200 100, 50 150, 50 300 
+                         C 50 450, 350 450, 350 600 
+                         C 350 750, 50 800, 50 900
+                         C 50 950, 200 950, 200 1000" 
+                      stroke="url(#path-gradient)" stroke-width="5" fill="none" stroke-dasharray="15, 10" stroke-linecap="round"/>
+                
+                <defs>
+                    <linearGradient id="path-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--accent); stop-opacity:0.4" />
+                        <stop offset="50%" style="stop-color:var(--primary); stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:var(--purple); stop-opacity:0.4" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="realm-card left reveal" onclick="toggleCard(this)">
+                <div class="card-header-view">
+                    <div class="card-icon math-icon">🔥</div> <div class="card-content">
+                        <h3>The Math Stronghold</h3>
+                        <p>Solve geometry puzzles to shield your avatar.</p>
+                    </div>
+                </div>
+                <div class="syllabus-path">
+                        <div class="node"><span>01</span> Arithmetic Defense</div>
+                        <div class="node"><span>02</span> Geometry Gates</div>
+                        <div class="node"><span>03</span> Algebra Boss Fight</div>
+                        <div class="view-more-link">And More →</div>
+                </div>
+            </div>
+
+            <div class="realm-card right reveal" onclick="toggleCard(this)">
+                <div class="card-header-view">
+                    <div class="card-icon grammar-icon">🌴</div>
+                    <div class="card-content">
+                        <h3>Grammar Archipelago</h3>
+                        <p>Unlock ancient chests by mastering syntax.</p>
+                    </div>
+                </div>
+                <div class="syllabus-path">
+                     <div class="node"><span>01</span> Noun Islands</div>
+                     <div class="node"><span>02</span> Verb Volcanoes</div>
+                     <div class="node"><span>03</span> The Syntax Ruins</div>
+                     <div class="view-more-link">And More →</div>
+                </div>
+            </div>
+
+            <div class="realm-card left reveal" onclick="toggleCard(this)">
+                <div class="card-header-view">
+                    <div class="card-icon science-icon">🧪</div>
+                    <div class="card-content">
+                        <h3>The Science Lab</h3>
+                        <p>Use real physics simulations to modify your world.</p>
+                    </div>
+                </div>
+                <div class="syllabus-path">
+                     <div class="node"><span>01</span> Gravity Sandbox</div>
+                     <div class="node"><span>02</span> Circuit Builder</div>
+                     <div class="node"><span>03</span> Chemical Reactions</div>
+                     <div class="view-more-link">And More →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="pedagogy" class="pedagogy-section">
+        <div class="section-header">
+            <h2>The Science of Play</h2>
+            <p>We map Game Mechanics directly to Bloom's Taxonomy of Learning.</p>
+        </div>
+        
+        <div class="pedagogy-container">
+            <div class="bloom-step step-1">
+                <div class="p-icon">⚔️</div>
+                <h3>Battle</h3>
+                <p><strong>Active Recall:</strong> Fast-paced math questions to defeat enemies.</p>
+                <span class="bloom-label">Bloom's: Remember</span>
+            </div>
+            <div class="bloom-connector">→</div>
+            <div class="bloom-step step-2">
+                <div class="p-icon">🏗️</div>
+                <h3>Build</h3>
+                <p><strong>Application:</strong> Use physics concepts to construct defenses.</p>
+                <span class="bloom-label">Bloom's: Apply</span>
+            </div>
+            <div class="bloom-connector">→</div>
+            <div class="bloom-step step-3">
+                <div class="p-icon">🧩</div>
+                <h3>Puzzle</h3>
+                <p><strong>Analysis:</strong> Debug broken code to unlock ancient doors.</p>
+                <span class="bloom-label">Bloom's: Analyze</span>
+            </div>
+        </div>
+    </section>
+
+<section id="parents" class="engine-section">
+        <div class="section-header">
+            <h2>The "Hidden Learning" Engine</h2>
+            <p>Why investors love the retention. Why parents love the results.</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="bento-card reveal">
+                <div class="bento-content">
+                    <h3>Guilt-Free Screen Time</h3>
+                    <p>We turn "zoning out" into "leveling up". The only game parents don't set a timer for.</p>
+                </div>
+                <div class="bento-icon">⏳</div>
+            </div>
+            
+            <div class="bento-card highlight-card reveal">
+                <div class="bento-content">
+                    <h3>The Retention Loop</h3>
+                    <p>Daily Streaks, XP, and Avatars create a sticky, habit-forming product with high LTV.</p>
+                </div>
+                <div class="bento-icon">🔥</div>
+            </div>
+            
+            <div class="bento-card reveal">
+                <div class="bento-content">
+                    <h3>Adaptive AI</h3>
+                    <p>The game slows down when the child struggles and speeds up when they master a concept.</p>
+                </div>
+                <div class="bento-icon">🧠</div>
+            </div>
+        </div>
+    </section>
+
+<section id="schools" class="schools-section">
+        <div class="school-container">
+            <div class="school-content">
+                <span class="school-badge">Institutional Partnerships</span> <h2>Scale Learning Outcomes with AI</h2>
+                <p>Seamlessly integrate our RPG engine into your existing LMS. Proven to increase student participation by 40%.</p>
+                <ul class="school-features">
+                    <li>✓ Whitelabel Options for EdTechs</li>
+                    <li>✓ API Integration (LMS/SIS)</li> <li>✓ Real-time Analytics Dashboard</li>
+                </ul>
+                <button class="btn-school" onclick="location.href='#contact'">Request Partnership Deck</button>
+            </div>
+            
+            <div class="school-visual">
+                <div class="dashboard-mockup">
+                    <div class="dash-header"></div>
+                    <div class="dash-graph">
+                        <div class="bar" style="height: 40%"></div>
+                        <div class="bar" style="height: 70%"></div>
+                        <div class="bar" style="height: 55%"></div>
+                        <div class="bar" style="height: 90%"></div>
+                    </div>
+                    <div class="dash-label">Class Performance: <span style="color:#22c55e">+12%</span></div>
+                </div>
+                <div class="school-logos">
+                    <span>Trusted by:</span> <span class="s-logo">Ryan Int.</span> <span class="s-logo">DPS</span> <span class="s-logo">Kendriya V.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-stats-row" id="counter-section">
+            <div class="school-stat">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Partner Schools</div>
+            </div>
+            <div class="school-stat">
+                <div class="stat-number" data-target="12000">0</div>
+                <div class="stat-label">Active Students</div>
+            </div>
+            <div class="school-stat">
+                <div class="stat-number" data-target="98">0</div>
+                <div class="stat-label">% Exam Pass Rate</div>
+            </div>
+        </div>
+    </section>
+
+<section class="inventory-section">
+        <div class="section-header">
+            <h2>Equip Your Learning Toolkit</h2>
+            <p>Tools designed to keep kids safe and parents informed.</p>
+        </div>
+        <div class="inventory-grid">
+            <div class="inventory-card reveal">
+                <div class="item-icon">🛡️</div>
+                <h4>The Safety Shield</h4>
+                <p>Kid-safe environment. No ads, no external chat, no data tracking.</p>
+            </div>
+            <div class="inventory-card reveal">
+                <div class="item-icon">🗺️</div>
+                <h4>The Parent Map</h4>
+                <p>Real-time dashboard to track exactly which concepts your child has mastered.</p>
+            </div>
+            <div class="inventory-card reveal">
+                <div class="item-icon">⏳</div>
+                <h4>Focus Timer</h4>
+                <p>Micro-learning sessions (15 mins) prevent burnout and screen fatigue.</p>
+            </div>
+            <div class="inventory-card reveal">
+                <div class="item-icon">🏆</div>
+                <h4>The Trophy Room</h4>
+                <p>Digital certificates and badges that can be printed for real-world motivation.</p>
+            </div>
+        </div>
+        </section>
+<!-- 
+    <section class="pricing-section">
+        <div class="section-header">
+            <h2>Choose Your Guild</h2>
+            <p>Flexible plans for every type of explorer.</p>
+        </div>
+        <div class="pricing-container">
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>Novice</h3>
+                    <div class="price">Free</div>
+                    <p>For the curious explorer</p>
+                </div>
+                <ul class="features-list">
+                    <li>✓ Access to World 1 (Math)</li>
+                    <li>✓ 3 Mini-games daily</li>
+                    <li>✓ Standard Avatar</li>
+                </ul>
+                <button class="btn-secondary full-width">Start Free</button>
+            </div>
+
+            <div class="pricing-card popular reveal">
+                <div class="ribbon">Best Value</div>
+                <div class="card-header">
+                    <h3>Legend</h3>
+                    <div class="price">₹5999<span class="period">/yr</span></div>
+                    <p>For the true scholar</p>
+                </div>
+                <ul class="features-list">
+                    <li>✓ <strong>All Worlds Unlocked</strong></li>
+                    <li>✓ Unlimited Playtime</li>
+                    <li>✓ Offline Mode</li>
+                    <li>✓ Printable Worksheets</li>
+                    <li>✓ Priority Support</li>
+                </ul>
+                <button class="btn-primary-small full-width">Join Guild</button>
+            </div>
+
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>Hero</h3>
+                    <div class="price">₹599<span class="period">/mo</span></div>
+                    <p>For the daily player</p>
+                </div>
+                <ul class="features-list">
+                    <li>✓ Access to All Worlds</li>
+                    <li>✓ Unlimited Playtime</li>
+                    <li>✓ Custom Avatar Gear</li>
+                </ul>
+                <button class="btn-secondary full-width">Select Plan</button>
+            </div>
+            </div>
+            </section>
+ -->
+<section class="reviews-section">
+        <div class="section-header">
+            <h2>Hall of Fame</h2>
+            <p>Stats from our top players and their parents.</p>
+        </div>
+        
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                
+                <div class="trading-card">
+                    <div class="card-top"><span class="role">Parent</span><span class="rating">★★★★</span></div>
+                    <p class="quote">"As a product person, I love how seamlessly the app blends learning with play. It's engaging, smart, and scalable."</p>
+                    <div class="author">- Anusha Manoharan, Product Expert & Developer</div>
+                </div>
+                <div class="trading-card">
+                    <div class="card-top"><span class="role">Parent</span><span class="rating">★★★★</span></div>
+                    <p class="quote">"What impressed me most was the clarity of insight for parents and teachers. It’s not just fun — it’s measurable progress.</p>
+                    <div class="author">- Ajay Jimmy, Co-Founder, Binary Circus</div>
+                </div>
+                <div class="trading-card">
+                    <div class="card-top"><span class="role">Parent</span><span class="rating">★★★★</span></div>
+                    <p class="quote">"Rock Paper Tuition is a breakthrough in EdTech. It’s rare to see gamification done this well while staying true to curriculum."</p>
+                    <div class="author">- Sharath Revi, CEO & Founder, Offline Human Studios</div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            
+            <div class="contact-info">
+                <span class="badge">Join the Alliance</span>
+                <h2>Ready to Level Up <br><span class="gradient-text">Learning?</span></h2>
+                <p>Whether you represent a school, an ed-tech fund, or just a curious parent, our team is ready to deploy.</p>
+                
+                <div class="contact-methods">
+                    <div class="method-row">
+                        <div class="method-icon">📧</div>
+                        <div class="method-text">
+                            <strong>Email Us</strong>
+                            <span>partnerships@rockpapertuition.com</span>
+                        </div>
+                    </div>
+                    <div class="method-row">
+                        <div class="method-icon">🌍</div>
+                        <div class="method-text">
+                            <strong>HQ Location</strong>
+                            <span>Kochi, Kerala, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <form class="game-form" id="contactForm" method="POST">
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Commander Shepherd" required>
+    </div>
+    
+    <div class="form-group">
+        <label>Email Coordinates</label>
+        <input type="email" name="email" placeholder="name@school.edu" required>
+    </div>
+
+    <div class="form-group">
+        <label>I am representing a...</label>
+        <select name="role">
+            <option>School / Institution</option>
+            <option>EdTech Company</option>
+            <option>Investor / VC</option>
+            <option>Parent / Student</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Mission Brief (Message)</label>
+        <textarea name="message" rows="4" placeholder="Brief us..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-mega full-width">Send Transmission 🚀</button>
+</form>
+            </div>
+
+        </div>
+    </section>
+
+<section id="faq" class="faq-section">
+        
+        <div class="faq-background">
+            <div class="float-shape shape-1">?</div>
+            <div class="float-shape shape-2">Q</div>
+            <div class="float-shape shape-3">A</div>
+        </div>
+
+        <div class="section-header">
+            <h2>Mission <span class="gradient-text">Intel</span></h2>
+            <p>Common questions from parents and potential allies.</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is this mapped to CBSE/ICSE curriculum?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Affirmative. Our engine covers 100% of the Grade 5-8 Math & Science syllabus, mapped topic-by-topic to standard boards.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>How much screen time is required?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We recommend "Micro-Dosing" education. Just 20 minutes a day is enough to complete the daily quests and maintain a streak.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you offer school pilot programs?</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. We deploy custom servers for partner schools with analytics dashboards for teachers. Use the contact form below to request a demo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="download-section">
+        <div class="download-content">
+            <h2>Mission Control is Ready. <br>Are You?</h2>
+            <p>Download now and get the "Starter Pack" for free.</p>
+            <div class="store-buttons">
+    
+    <a href="https://apps.apple.com/us/app/your-app-id" target="_blank" class="store-btn btn-apple">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="Apple Logo" class="store-icon">
+        <span>App Store</span>
+    </a>
+
+    <a href="https://play.google.com/store/apps/details?id=com.RextechStudios.RockPaperTuition" target="_blank" class="store-btn btn-google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Play Store Logo" class="store-icon">
+        <span>Google Play</span>
+    </a>
+
+</div>
+        </div>
+    </section>
+
+    <div class="safety-strip">
+        <div class="safety-logos">
+            <span class="safety-badge">🔒 SSL Secure</span>
+            <span class="safety-badge">🛡️ COPPA Compliant</span>
+            <span class="safety-badge">✅ kidSAFE Certified</span>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="footer-logo-link">
+                    <img src="assets/logo.png" alt="Rock Paper Tuition" class="footer-logo-img">
+                </a>
+                <p>Making scholars out of gamers since 2025.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Kit</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Safety Center</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Socials</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 512 512" width="20">
+                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM365.7 421.8h39.1L151.1 88h-42L365.7 421.8z"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 512 512" width="20">
+                            <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 121.3 87.1 222.4 203 245.7V327.7h-63V256h63v-54.6c0-62.2 37-96.5 93.7-96.5 27.1 0 55.5 4.8 55.5 4.8v61h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h68.8l-11 71.7h-57.8V501.7C416.9 478.4 504 377.3 504 256z"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 448 512" width="20">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 448 512" width="20">
+                            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                        </svg>
+                    </a>
+                </div>
+                    </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>© 2025 Rextech Studios. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
