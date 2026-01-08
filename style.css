@@ -2096,3 +2096,25 @@ button[type="submit"]:active {
     color: rgba(255, 255, 255, 0.7);
     display: block;
 }
+
+@media (max-width: 768px) {
+    
+    /* 1. Stack the buttons vertically */
+    .store-buttons {
+        display: flex;
+        flex-direction: column; /* This does the magic */
+        align-items: center;    /* Center them horizontally */
+        gap: 20px;              /* Add space between the two buttons */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* 2. Optional: Make buttons wider for easier tapping on phone */
+    .store-btn {
+        width: 80% !important;   /* Occupy 80% of screen width */
+        max-width: 320px;        /* Prevent them from getting too huge */
+        justify-content: center; /* Center the icon and text inside */
+        margin: 0 !important;    /* Reset desktop margins */
+    }
+}
+
