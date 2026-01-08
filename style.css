@@ -266,7 +266,7 @@ p { color: var(--text-gray); font-size: 1.1rem; line-height: 1.6; }
     width: 45%;
     border: 1px solid rgba(0,0,0,0.08);
     transition: transform 0.3s;
-    cursor: pointer;
+    /* cursor: pointer; */
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 .realm-card:hover { transform: translateY(-10px); border-color: var(--primary); }
@@ -856,7 +856,7 @@ footer {
     justify-content: flex-end;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.dash-header { height: 10px; width: 60%; background: rgba(0,0,0,0.08); border-radius: 10px; position: absolute; top: 20px; left: 20px; }
+.dash-header { height: 10px; width: 90%; background: rgba(0,0,0,0.08); border-radius: 10px; position: absolute; top: 20px; left: 20px; }
 .dash-graph { display: flex; align-items: flex-end; gap: 15px; height: 120px; margin-bottom: 20px; }
 .bar { 
     flex: 1; 
@@ -1085,14 +1085,14 @@ footer {
     font-size: 0.85rem;
     color: var(--primary);
     font-weight: 700;
-    cursor: pointer;
+    /* cursor: pointer; */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: inline-block;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s;
 }
-.view-more-link:hover { border-bottom-color: var(--primary); }
+/* .view-more-link:hover { border-bottom-color: var(--primary); } */
 
 /* 3. Animated Stats (School Section) */
 .school-stats-row {
