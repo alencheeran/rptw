@@ -2297,3 +2297,29 @@ button[type="submit"]:active {
         margin: 0 !important;
     }
 }
+
+a.method-row {
+    text-decoration: none; /* Removes underline */
+    color: inherit;        /* Keeps your original text colors */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;         /* Ensures flex layout is kept */
+    align-items: center;   /* Vertically align icon and text */
+    gap: 15px;             /* Space between icon and text */
+    
+    /* Optional: Add a subtle border or padding if not already there */
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* Hover Effect: Make it look interactive */
+a.method-row:hover {
+    background: rgba(255, 255, 255, 0.05); /* Subtle highlight */
+    transform: translateX(5px);            /* Slight slide to the right */
+}
+
+/* Ensure the address text doesn't turn blue */
+a.method-row span, 
+a.method-row strong {
+    color: inherit; 
+}
